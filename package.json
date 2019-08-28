@@ -1,0 +1,19 @@
+{
+  "name": "codegen-repro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@graphql-codegen/cli": "^1.6.1",
+    "graphql": "^14.5.3",
+    "@graphql-codegen/typescript": "1.6.1",
+    "@graphql-codegen/typescript-operations": "1.6.1",
+    "@graphql-codegen/introspection": "1.6.1"
+  },
+  "dependencies": {
+    "graphql-tag": "^2.10.1"
+  },
+  "scripts": {
+    "generate": "DEBUG=1 graphql-codegen --config codegen.yml"
+  }
+}

@@ -1,0 +1,50 @@
+type TypeTwoComplex {
+  bar: ComplexType
+}
+
+type TypeTwo implements Node {
+  """
+  The ID of an object
+  """
+  id: ID!
+
+  """
+  Total price for the order
+  """
+  collidingField: TypeTwoComplex!
+}
+
+type TypeOneComplex {
+  foo: ComplexType
+}
+
+type TypeOne implements Node {
+  """
+  The ID of an object
+  """
+  id: ID!
+  collidingField: TypeOneComplex!
+}
+
+interface Node {
+  id: ID!
+}
+
+type ComplexType {
+  fieldOne: String
+  fieldTwo: Int
+}
+
+scalar Date
+
+type Query {
+  """
+  Fetches an object given its ID
+  """
+  node(
+    """
+    The ID of an object
+    """
+    id: ID!
+  ): Node
+}
